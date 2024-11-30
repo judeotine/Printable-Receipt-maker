@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+}
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 420px;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #4cae4c;
+}
+.receipt {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #080808;
+    border-radius: 5px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    text-align: left;
+}
+.no-date {
+    text-align: left;
+    margin-left: auto;
+    width: 140px;
+    
+}
+.from-amount {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.by {
+    width: 100%;
+    text-align: right;
+}
+.receipt h2 {
+    text-align: center;
+}
+.receipt p {
+    margin: 5px 0;
+    
+}
+.receipt p span {
+    border-bottom: 1px solid #080808;
+    width: auto;
+}
+#printBtn {
+    background-color: #337ab7;
+}
+
+#button-grp {
+    display: flex;
+    gap: 10px;
+}
+
+#button-grp button {
+    width: 100%;
+}
+
+/* Print styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .receipt, .receipt * {
+        visibility: visible;
+    }
+    .receipt {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printable Receipt Maker</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Printable Receipt Maker</h1>
+        <form id="receiptForm">
+            <label for="receiptNo">Receipt No.:</label>
+            <input type="text" id="receiptNo" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+
+            <label for="from">From:</label>
+            <input type="text" id="from" required>
+
+            <label for="paymentFor">Payment For:</label>
+            <input type="text" id="paymentFor" required>
+
+            <label for="receivedBy">Received By:</label>
+            <input type="text" id="receivedBy" required>
+
+            <button type="button" id="generateBtn">Generate Receipt</button>
+        </form>
+
+        <div class="receipt" id="receiptPreview" style="display: none;">
+            <h2>Receipt</h2>
+            <div class="no-date">
+                <p><strong>Receipt No.:</strong> <span id="displayReceiptNo"></span></p>
+                <p><strong>Date:</strong> <span id="displayDate"></span></p>
+            </div>
+            <div class="from-amount">
+                <p><strong>From:</strong> <span id="displayFrom"></span></p>
+                <p><strong>Amount:</strong> $<span id="displayAmount"></span></p>
+            </div>
+            <p><strong>Payment For:</strong> <span id="displayPaymentFor"></span></p>
+            <p class="by"><strong>Received By:</strong> <span id="displayReceivedBy"></span></p>
+        </div>
+
+        <div id="button-grp" style="display: none;">
+            <button id="editBtn">Edit Receipt</button>
+            <button id="printBtn">Print Receipt</button>
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+</html>
